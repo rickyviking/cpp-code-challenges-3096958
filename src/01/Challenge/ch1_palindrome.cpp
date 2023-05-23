@@ -15,8 +15,17 @@
 bool is_palindrome(std::string str){
 
     // Write your code here
-
-    return false;
+    unsigned int count = str.size() / 2;
+    unsigned int size = str.size();
+    for (size_t i = 0; i < count; i++)
+    {
+        if(std::tolower(str[i]) != std::tolower(str[size-1-i]))
+        {
+            return false;
+        }        
+    }
+    
+    return true;
 }
 
 // Main function
